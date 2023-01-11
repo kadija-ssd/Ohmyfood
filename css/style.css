@@ -1,0 +1,244 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 2px;
+}
+/* mobile first */
+@media screen and (max-width:650px){
+    header{
+        width:100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 5px 10px lightgrey;
+}
+    header h1{
+        font-family: 'Shrikhand', cursive;
+    }
+    .location-part{
+        text-align: center;
+        background-color: #F6F6F6;
+    }
+    .place{
+        margin-top: 5px;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    align-items: center;
+    }
+    .fa-solid fa-location-dot{
+    font-weight: 900;
+    margin-left: 47px;
+    }
+    .search{
+        border: none;
+    font-size: 1.3rem;
+    width: 200px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    background: #F6F6F6;
+    }
+    .info{
+        display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #EAEAEA;
+    }
+    .info-part1{
+        font-size: 1.8rem;
+    margin: 0;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+    flex-basis: 100%;
+    }
+    .info-part2{
+        font-size: 1.8rem;
+    margin: 0;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+    flex-basis: 100%;
+    margin-bottom: 3rem;
+    }
+    .location-part label{
+        display: flex;
+    justify-content: center;
+    color: white;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    background: linear-gradient(#ff79da, #9356dc);
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 3px 10px darkgrey;
+    transition: 100ms;
+    }
+    main {
+        display: block;
+    }
+    .ftn-meal{
+        margin-bottom: 2rem;
+    }
+    .ftn-name{
+        margin: 2rem 0 0 1rem;
+    display: flex;
+    justify-content: start;
+    }
+    .food-opt{
+        padding: 0;
+        padding-left: 20px;
+    }
+    .food-opt span{
+        position: relative;
+    left: -1rem;
+    border: 1px solid #9356dc;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50%;
+    font-weight: bold;
+    background-color: #9356dc;
+    color: white;
+    }
+    li{
+        width: 280px;
+    background-color: #F6F6F6;
+    border-radius: 1rem;
+    padding: 1.5rem 0;
+    box-shadow: 0 3px 5px darkgrey;
+    transition: transform 1s;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    margin-top: 27px;
+    }
+    .opt1 .opt2 .opt3{
+        margin-right: 0.5rem;
+    }
+    .opt1{
+        padding-right: 10px;
+    }
+    .opt2{
+        padding-right: 10px;
+        padding-top: 0px;
+    }
+    .opt3{
+        padding-right: 10px;
+        padding-top: 0px;
+    }
+    .food-part{
+        display: flex;
+        gap: 1rem;
+        display: flex;
+        gap: 1rem;
+        padding-bottom: 4rem;
+        background-color: #F6F6F6;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .food-part h2{
+        margin: 0 0 0 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-right: 181px;
+    padding-top: 55px;
+    }
+    .card{
+        display: flex;
+    flex-basis: 100%;
+    min-width: 300px;
+    margin: 1rem 1rem 0 1rem;
+    min-width: 300px;
+    margin: 1rem 1rem 0 1rem;
+    cursor: pointer;
+    position: relative;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 45%;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 3px 8px darkgrey;
+
+    }
+    .card a{
+        text-decoration: none;
+    color: inherit;
+    }
+    .card img{
+        width: 100%;
+    object-fit: cover;
+    min-height: 200px;
+    max-height: 200px;
+    border-radius: 1rem 1rem 0 0;
+    }
+    .new{
+        position: absolute;
+    right: 10px;
+    top: 20px;
+    font-weight: bold;
+    background-color: #99E2D0;
+    color: #2FAF94;
+    padding: 0.5rem;
+    width: 75px;
+    }
+    .food-info{
+        display: flex;
+    justify-content: space-between;
+    padding-right: 15px;
+    }
+    .part-name{
+        width: 85%;
+    }
+    .part-name h3{
+        margin: 0;
+    padding: 0.3rem 0 0 1rem;
+    }
+    .part-name p{
+        margin: 0;
+    padding: 0.3rem 0 0 1rem;
+    }
+    .heart{
+        display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    }
+    .fa-regular{
+        font-weight: 400;
+        visibility: visible;
+    }
+    .fa-solid fa-heart{
+        display: none;
+        visibility: hidden;
+    }
+    footer{
+        padding-left: 30px;
+        background: #808080;;
+        padding-top: 10px;
+        padding-bottom: 36px;
+    }
+    footer h1{
+        font-family: 'Shrikhand', cursive;
+    }
+    footer a{
+        text-decoration: none;
+        color: black;
+    }
+}
+/*@media screen (min-width:651px) and (max-width:768px){
+    
+}*/
+
+
+
+
+
+
+
+
+
+
+
+

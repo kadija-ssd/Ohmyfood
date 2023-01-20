@@ -104,24 +104,37 @@ body{
     border-radius: 1rem;
     padding: 1.5rem 0;
     box-shadow: 0 3px 5px darkgrey;
-    transition: transform 1s;
     font-size: 1.1rem;
     white-space: nowrap;
     margin-top: 27px;
+    font-weight: bold;
+    }
+    li:hover{
+        background-color:#F5EDFF;
+        transition: 0.5s;
+        transform: scale(1.02);
     }
     .opt1 .opt2 .opt3{
         margin-right: 0.5rem;
+        color:gray;
     }
+    li i:hover{
+        color:#9356dc;
+    }
+
     .opt1{
         padding-right: 10px;
+        color: gray;
     }
     .opt2{
         padding-right: 10px;
         padding-top: 0px;
+        color: gray;
     }
     .opt3{
         padding-right: 10px;
         padding-top: 0px;
+        color: gray;
     }
     .food-part{
         display: flex;
@@ -203,14 +216,32 @@ body{
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+    width: 30px;
+  stroke-width: 30;
+  stroke: black;
+  fill: white;
+  cursor: pointer;
     }
-    .fa-regular{
+    .fa-regular fa-heart{
         font-weight: 400;
         visibility: visible;
     }
-    .fa-solid fa-heart{
-        display: none;
-        visibility: hidden;
+    .heart-classic{
+        position: absolute;
+        /*fill: url(#text-fill);*/
+        stroke: none;
+    }
+    .heart-pink{
+        width: 50px;
+        position: relative;
+    }
+    .heart-pink:hover{
+        /*opacity:0;*/
+        stroke: url(#text-fill);
+        border:white;
+        fill: url(#text-fill);
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
     }
     footer{
         padding-left: 30px;
@@ -257,7 +288,7 @@ body{
         justify-content: space-around;
     }
     li{
-        width: 212px;
+        width: 250px;
         font-size: 14px;
         white-space: nowrap;
         margin-top: 27px;

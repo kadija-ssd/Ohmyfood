@@ -26,6 +26,7 @@ body{
     font-size: 1.3rem;
     padding-top: 1rem;
     align-items: center;
+    background-color: #EAEAEA;
     }
     .fa-solid fa-location-dot{
     font-weight: 900;
@@ -33,29 +34,34 @@ body{
     }
     .search{
         border: none;
-    font-size: 1.3rem;
-    width: 200px;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-    background: #F6F6F6;
+        font-size:16px;
+        width: 131px;
+        font-weight: bolder;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        background: #F6F6F6;
     }
     .info{
         display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    background-color: #EAEAEA;
+    background-color: #F7F7F7;
     }
     .info-part1{
-        font-size: 1.8rem;
-    margin: 0;
-    margin-top: 1.5rem;
-    padding: 0 1rem;
-    flex-basis: 100%;
+        font-size:25px;
+        margin: 0;
+        font-weight: bold;
+        font-family:'Roboto';
+        margin-top: 1.5rem;
+        padding: 0 1rem;
+        flex-basis: 100%;
     }
     .info-part2{
-        font-size: 1.8rem;
+        font-size:18px;
     margin: 0;
+    color:gray;
+    font-family:'Roboto';
     margin-top: 1.5rem;
     padding: 0 1rem;
     flex-basis: 100%;
@@ -65,8 +71,9 @@ body{
         display: flex;
     justify-content: center;
     color: white;
+    font-family: 'Roboto';
     border-radius: 2rem;
-    font-size: 1.3rem;
+    font-size:17px;
     background: linear-gradient(#ff79da, #9356dc);
     padding: 0.8rem 1.5rem 0.8rem 1.5rem;
     margin-bottom: 3rem;
@@ -100,7 +107,7 @@ body{
     }
     li{
         width: 280px;
-    background-color: #F6F6F6;
+    background-color: #F7F7F7;
     border-radius: 1rem;
     padding: 1.5rem 0;
     box-shadow: 0 3px 5px darkgrey;
@@ -142,7 +149,7 @@ body{
         display: flex;
         gap: 1rem;
         padding-bottom: 4rem;
-        background-color: #F6F6F6;
+        background-color: #F7F7F7;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -205,10 +212,12 @@ body{
     .part-name h3{
         margin: 0;
     padding: 0.3rem 0 0 1rem;
+    font-family: 'Roboto';
     }
     .part-name p{
         margin: 0;
     padding: 0.3rem 0 0 1rem;
+    font-family: 'Roboto';
     }
     .heart{
         display: flex;
@@ -216,11 +225,11 @@ body{
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    width: 30px;
-  stroke-width: 30;
-  stroke: black;
-  fill: white;
-  cursor: pointer;
+    width: 23px;
+    stroke-width:19px;
+    stroke: black;
+    fill: white;
+    cursor: pointer;
     }
     .fa-regular fa-heart{
         font-weight: 400;
@@ -245,16 +254,25 @@ body{
     }
     footer{
         padding-left: 30px;
-        background: #808080;;
+        background: #353535;;
         padding-top: 10px;
         padding-bottom: 44px;
+        height:229px;
+    }
+    .footer p{
+        color:white;
+        font-family:'Roboto';
+    }
+    .footer p i{
+        padding-right:10px;
     }
     footer h1{
         font-family: 'Shrikhand', cursive;
+        font-size:22px;
     }
     footer a{
         text-decoration: none;
-        color: black;
+        color:white;
     }
     /* tablette */
 @media screen and (min-width:560px) and (max-width:768px){

@@ -1,4 +1,3 @@
-
 body {
     box-sizing: border-box;
     margin: 0 auto;
@@ -8,6 +7,7 @@ body {
 body fieldset {
     border: 0;
 }
+/* header */
 header {
     box-shadow: 0 5px 10px lightgrey;
 }
@@ -33,6 +33,10 @@ header > div {
     color: black;
     cursor: pointer;
 }
+.logo{
+    width: 166px;
+    padding-right: 23px;
+}
 .title {
     display: flex;
     justify-content: center;
@@ -42,8 +46,10 @@ header > div {
     font-family: "Shrikhand", cursive;
     font-size:27px;
 }
+/* main */
 main{
     background-color: #EAEAEA;
+    font-family: "Roboto", sans-serif;
 }
 .img-back{
     height: 300px;
@@ -64,6 +70,44 @@ main{
     padding-left: 1rem;
     background-color: #EAEAEA;
 }
+#art-1, #art-4, #art-7 {
+    animation: apparition 600ms ease-in;
+    }
+#art-2, #art-5, #art-8 {
+    animation: apparition 1.2s ease-in;
+    }
+#art-3, #art-6, #art-9 {
+    animation: apparition 1.8s ease-in;
+    }
+#art-10 {
+    animation: apparition 2.4s ease-in;
+    }
+    @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        }
+    }
+    @keyframes effet-opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
 .restau-name{
     font-family: "Shrikhand", cursive;
     font-size: 22px;
@@ -75,9 +119,9 @@ align-items: center;
 justify-content: center;
 font-size: 1.5rem;
 width: 30px;
-stroke-width: 30;
+stroke-width:16px;
 stroke: black;
-fill: white;
+fill:#EAEAEA;
 cursor: pointer;
 }
 .fa-regular fa-heart{
@@ -97,7 +141,6 @@ cursor: pointer;
     right: 42px;
 }
 .heart-pink:hover{
-    /*opacity:0;*/
     stroke: url(#text-fill);
     border:white;
     fill: url(#text-fill);
@@ -128,6 +171,14 @@ cursor: pointer;
     gap: 5px;
     margin-top:-49px;
 }
+.meal-choice h3::after{
+    position: absolute;
+    top: 25px;
+    content: "";
+    height: 3px;
+    width: 50px;
+    background-color: #99e2d0; 
+}
 .meal-choice .food-title .entree-div,.meal,.last-food{
     display: flex;
     justify-content: center;
@@ -146,6 +197,9 @@ cursor: pointer;
 .meal-choice .food-title .entree-div p,.meal p, .last-food p {
     font-size: 11px;
 }
+.article{
+    transition: all 0.5s;
+}
 .entree-div h3, .meal h3,.last-food h3 {
     display: flex;
     justify-content: center;
@@ -156,13 +210,6 @@ cursor: pointer;
     margin: 0;
     padding-bottom: 1rem;
     position: relative;
-}
-.entree-div h3::after,.meal h3::after, .last-food h3::after {
-    position: absolute;
-    top: 25px;
-    height: 3px;
-    width: 50px;
-    background-color: #99e2d0;
 }
 .entree-div .menu-part, .meal .menu-part,.last-food .menu-part {
     display: flex;
@@ -219,6 +266,11 @@ cursor: pointer;
     border-radius: 0 1rem 1rem 0;
     width: 50px;
     margin-right: -4rem;
+    animation-name:spin;
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
 }
 .order {
     display: flex;
@@ -252,44 +304,33 @@ cursor: pointer;
     padding: 0 1rem;
     flex-basis: 100%;
 }
-footer {
-    background-color: #353535;
-    color: white;
+/* footer */
+footer{
+    padding-left: 30px;
+    background: #353535;;
+    padding-top: 10px;
+    padding-bottom: 44px;
+    height:229px;
 }
-footer h1 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    font-family: "Shrikhand", cursive;
-    font-weight: normal;
+.footer p{
+    color:white;
+    font-family:'Roboto';
 }
-footer a {
+.footer p i{
+    padding-right:10px;
+}
+footer h1{
+    font-family: 'Shrikhand', cursive;
+    font-size:22px;
+}
+footer a{
     text-decoration: none;
-    color: white;
-    align-items: center;
+    color:white;
 }
-footer i {
-    padding-right: 5px;
+.logo-footer{
+    color:white;
 }
-footer .footer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 1rem 0 1rem 1.5rem;
-}
-
-/*
-*       MEDIA QUERIES
-*/
-@media (max-width: 1122px) {
-.food-title, .meal, .food-title .last-food {
-    display: flex;
-    width:100%;
-}
-.menu-part,.meal .menu-part, .last-food .menu-part {
-    max-width: 440px;
-}
-}
+/*tablette */
 @media (max-width: 667px) and (hover: none) {
     .menus .articles .entrees, .meal, .last-food {
     width: 100%;
@@ -316,6 +357,10 @@ footer .footer {
     .menu-part:hover .check-btn, .meal .menu-part:hover .check-btn,  .last-food .menu-part:hover .check-btn {
     margin: 0;
     cursor: pointer;
+    }
+    .meal-choice h3::after{
+        display: flex;
+        justify-content: center;
     }
     .menu-part:hover .check-btn i, .meal .menu-part:hover .check-btn i, .last-food .menu-part:hover .check-btn i {
     animation: spin 1s;
@@ -377,76 +422,26 @@ footer .footer {
     padding-left: 0 !important;
     }
 }
-@media (max-width: 667px) {
-        .entree-div, .meal, .last-food {
-    width: 100%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+/* desktop */
+@media (min-width:1000px) and (max-width: 1400px){
+    .food-title, .meal, .food-title .last-food {
+        display: flex;
+        width:100%;
     }
-    .menu-part, .meal .menu-part, .last-food .menu-part {
-    display: flex;
-    background-color: white;
-    width: 100%;
-    height: 60px;
-    border-radius: 1rem;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    box-shadow: 0 2px 5px darkgray;
+    .menu-part,.meal .menu-part, .last-food .menu-part {
+        max-width: 440px;
     }
-    .menu-part:hover .check-btn i, .meal .menu-part:hover .check-btn i, .last-food .menu-part:hover .check-btn i {
-    animation: spin 1s;
-    }
-    .menu-part .text-part, .text-part, .last-food .menu-part .text-part {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    justify-content: space-between;
-    width: calc(100% - 54px);
-    padding: 0.5rem 0 0.5rem 1rem;
-    } 
-    .menu-part .text-part:hover, .meal .menu-part .text-part:hover,  .last-food .menu-part .text-part:hover {
-    cursor: pointer;
-    }
-    .menu-part .price, .meal .menu-part .price, .last-food .menu-part .price {
+    footer h1{
     display: flex;
     justify-content: center;
-    width:27%;
-    font-weight: bold;
-    align-items: flex-end;
-    padding: 0 0.5rem 0.5rem 0;
-    border-radius: 0 1rem 1rem 0;
-    }
-    .menu-part .price:hover, .meal .menu-part .price:hover, .last-food .menu-part .price:hover {
-    cursor: pointer;
-    }
-    .menu-part .check-btn, .menu-part .check-btn, .last-food .menu-part .check-btn {
-    display: flex;
-    justify-content: center;
-    background-color: #99E2D0;
-    color: white;
-    font-weight: bold;
-    font-size: 1.3rem;
-    align-items: center;
-    border-radius: 0 1rem 1rem 0;
-    width: 50px;
-    margin-right: -4rem;
-    }
-    .entree-div h3, .meal h3, .last-food h3 {
-    display: flex;
-    justify-content: flex-start !important;
-    margin-left: 10px;
-    }
-    footer {
-    padding-left: 1rem;
-    }
-    footer h1,.footer {
-    display: block;
-    }
-    .footer .fa-solid.fa-utensils {
-    margin-right: 6px;
-    }
+    width: 100%;
+    font-family: "Shrikhand", cursive;
+    font-weight: normal;
+}
+    .footer{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 1rem 0 1rem 1.5rem;
+}
 }

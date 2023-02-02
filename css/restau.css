@@ -82,21 +82,6 @@ main{
 #art-10 {
     animation: apparition 2.4s ease-in;
     }
-    @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-        }
-    }
-    @keyframes effet-opacity {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 @keyframes apparition {
     0% {

@@ -315,9 +315,9 @@ body{
         position: relative;
     }
     .heart-pink:hover{
-        stroke: url(.text-fill);
+        stroke: url(#text-fill);
         border:white;
-        fill: url(.text-fill);
+        fill: url(#text-fill);
         -webkit-transition: 0.5s;
         transition: 0.5s;
     }

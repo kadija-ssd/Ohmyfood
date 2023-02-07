@@ -350,12 +350,11 @@ body{
     .food-opt{
         display: flex;
         flex-direction: row;
-        width: 100%;
         justify-content: space-around;
         }
     li{
-        width: 212px;
-        font-size: 14px;
+        width: 211px;
+        font-size: 13px;
         white-space: nowrap;
         margin-top: 27px;
         }

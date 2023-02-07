@@ -71,18 +71,25 @@ main{
     background-color: #EAEAEA;
 }
 #art-1, #art-4, #art-7 {
-    animation: apparition 600ms ease-in;
+    animation-duration:600ms;
+    animation-name:apparition;
+    transition-timing-function: ease-in;
     }
 #art-2, #art-5, #art-8 {
-    animation: apparition 1.2s ease-in;
+    animation-duration:1.2s;
+    animation-name:apparition;
+    transition-timing-function: ease-in;
     }
 #art-3, #art-6, #art-9 {
-    animation: apparition 1.8s ease-in;
+    animation-duration:1.8s;
+    animation-name:apparition;
+    transition-timing-function: ease-in;
     }
 #art-10 {
-    animation: apparition 2.4s ease-in;
+    animation-duration:2.4s;
+    animation-name:apparition;
+    transition-timing-function: ease-in;
     }
-}
 @keyframes apparition {
     0% {
         opacity: 0;
